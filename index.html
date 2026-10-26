@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>我們家的遊戲中心</title>
+<meta name="theme-color" content="#1e2a5a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="遊戲中心">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--bg1:#1e2a5a;--bg2:#3a2a6b;--ink:#fff8ec;--gold:#ffc94a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:linear-gradient(160deg,var(--bg1),var(--bg2));background-attachment:fixed;color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1.5px),radial-gradient(rgba(255,255,255,.3) 1px,transparent 1.5px);background-size:90px 90px,140px 140px;background-position:10px 20px,60px 70px;opacity:.6}
+main{position:relative;max-width:560px;margin:0 auto;padding:calc(36px + env(safe-area-inset-top)) 18px calc(40px + env(safe-area-inset-bottom))}
+header{text-align:center;margin-bottom:26px}
+.badge{display:inline-block;font-size:44px;line-height:1;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-4deg)}}
+h1{margin:10px 0 4px;font-size:30px;letter-spacing:3px}
+.sub{margin:0;opacity:.75;font-size:15px}
+.list{display:flex;flex-direction:column;gap:16px}
+.card{display:flex;align-items:center;gap:16px;padding:16px;border-radius:22px;text-decoration:none;color:#2a2238;background:#fff8ec;box-shadow:0 6px 0 rgba(0,0,0,.25),0 10px 24px rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s}
+.card:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.25),0 4px 12px rgba(0,0,0,.25)}
+.art{flex:none;width:84px;height:84px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:46px;position:relative;overflow:hidden}
+.pet .art{background:linear-gradient(160deg,#ffd6e5,#ffb0c8)}
+.vb .art{background:linear-gradient(160deg,#9fe3ff,#5fb8ff)}
+.rk .art{background:linear-gradient(160deg,#3e9a6e,#1d5a45);gap:3px}
+.mini{width:22px;height:31px;border-radius:5px;background:#fffaf0;box-shadow:0 2px 0 #c9bb98;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;font-family:"Arial Rounded MT Bold",system-ui,sans-serif}
+.mini:nth-child(1){color:#d13a2c;transform:rotate(-8deg)}.mini:nth-child(2){color:#1d5fc2}.mini:nth-child(3){color:#e08600;transform:rotate(8deg)}
+.txt{flex:1;min-width:0}
+.txt h2{margin:0 0 4px;font-size:20px}
+.txt p{margin:0;font-size:14px;color:#6a5f78;line-height:1.5}
+.tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:#efe6ff;color:#5b3fb0}
+.tag.on{background:#ffe9b8;color:#8a5a00}
+.go{flex:none;width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#5a3d00}
+footer{margin-top:30px;text-align:center;font-size:13px;opacity:.65;line-height:1.7}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="badge">🎮</div>
+    <h1>我們家的遊戲中心</h1>
+    <p class="sub">選一個遊戲，一起來玩吧！</p>
+  </header>
+  <div class="list">
+    <a class="card pet" href="/pet-house/">
+      <div class="art">🐾</div>
+      <div class="txt"><h2>口袋小寵物屋</h2><p>養一隻專屬小寵物，餵食、玩遊戲、布置房間</p><div class="tags"><span class="tag">養成</span><span class="tag">小遊戲</span></div></div>
+      <div class="go">›</div>
+    </a>
+    <a class="card vb" href="/pet-house/volleyball/">
+      <div class="art">🏐</div>
+      <div class="txt"><h2>方塊排球大賽</h2><p>3D 方塊風排球，接球、舉球、殺球拿獎盃</p><div class="tags"><span class="tag">運動</span><span class="tag on">可線上對打</span></div></div>
+      <div class="go">›</div>
+    </a>
+    <a class="card rk" href="/pet-house/rummikub/">
+      <div class="art"><div class="mini">7</div><div class="mini">7</div><div class="mini">7</div></div>
+      <div class="txt"><h2>家庭拉密</h2><p>數字牌磚拼組合，2–4 人，人不夠可補電腦</p><div class="tags"><span class="tag">益智</span><span class="tag on">可線上連線</span></div></div>
+      <div class="go">›</div>
+    </a>
+  </div>
+  <footer>把這頁加到手機主畫面，<br>以後一個圖示就能找到所有遊戲。</footer>
+</main>
+</body>
+</html>
